@@ -56,8 +56,8 @@ makenew () {
 
   git mv makenew_python_package ${mk_slug}
 
-  mk_attribution='    Built from `makenew/python-package <https://github.com/makenew/python-package>`__.'
-  sed -i -e "6i ${mk_attribution}\n" README.rst
+  mk_attribution='   Built from `makenew/python-package <https://github.com/makenew/python-package>`__.'
+  sed -i -e "6i \ ${mk_attribution}\n" README.rst
 
   echo
   echo 'Replacing boilerplate.'
