@@ -44,6 +44,7 @@ makenew () {
   sed -i -e '4d;7,10d;27,128d;222,226d' README.rst
   sed -i -e "22i ${mk_description}" README.rst
 
+  find_replace "s/__version__ =.*/__version__ = '${mk_version}'/g"
   find_replace "s/0\.0\.0\.\.\./${mk_version}.../g"
   find_replace "s/Python Package Skeleton/${mk_title}/g"
   find_replace "s/Python package skeleton\./${mk_description}/g"
