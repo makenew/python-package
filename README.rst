@@ -126,13 +126,13 @@ Installation
 ------------
 
 This package is registered on the `Python Package Index (PyPI)`_
-as makenew-python-package_.
+as makenew_python_package_.
 
 Add this line to your application's requirements.txt
 
 ::
 
-    makenew-python-package
+    makenew_python_package
 
 and install it with
 
@@ -147,9 +147,9 @@ Alternatively, install it directly using pip with
 
 ::
 
-    $ pip install makenew-python-package
+    $ pip install makenew_python_package
 
-.. _makenew-python-package: https://pypi.python.org/pypi/makenew-python-package
+.. _makenew_python_package: https://pypi.python.org/pypi/makenew-python-package
 .. _Python Package Index (PyPI): https://pypi.python.org/
 
 Development and Testing
