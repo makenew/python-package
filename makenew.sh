@@ -31,7 +31,8 @@ stage_env () {
 
 makenew () {
   read -p '> Package title: ' mk_title
-  read -p '> Package name (slug): ' mk_slug
+  read -p '> Package name (slug with dashes): ' mk_slug
+  read -p '> Module name (slug with underscores): ' mk_module
   read -p '> Package description: ' mk_description
   read -p '> Version number: ' mk_version
   read -p '> Author name: ' mk_author
@@ -52,9 +53,10 @@ makenew () {
   find_replace "s/Evan Sosenko/${mk_author}/g"
   find_replace "s/razorx@evansosenko\.com/${mk_email}/g"
   find_replace "s/makenew\/python-package/${mk_user}\/${mk_repo}/g"
-  find_replace "s/makenew_python_package/${mk_slug}/g"
+  find_replace "s/makenew-python-package/${mk_slug}/g"
+  find_replace "s/makenew_python_package/${mk_module}/g"
 
-  git mv makenew_python_package ${mk_slug}
+  git mv makenew_python_package ${mk_module}
 
   mk_attribution='   Built from `makenew/python-package <https://github.com/makenew/python-package>`__.'
   sed -i -e "6i \ ${mk_attribution}\n" README.rst

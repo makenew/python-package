@@ -3,8 +3,8 @@ Python Package Skeleton
 
 |PyPI| |GitHub-license| |Requires.io| |Travis|
 
-.. |PyPI| image:: https://img.shields.io/pypi/v/makenew_python_package.svg
-   :target: https://pypi.python.org/pypi/makenew_python_package
+.. |PyPI| image:: https://img.shields.io/pypi/v/makenew-python-package.svg
+   :target: https://pypi.python.org/pypi/makenew-python-package
    :alt: PyPI
 .. |GitHub-license| image:: https://img.shields.io/github/license/makenew/python-package.svg
    :target: ./LICENSE.txt
@@ -126,13 +126,13 @@ Installation
 ------------
 
 This package is registered on the `Python Package Index (PyPI)`_
-as makenew_python_package_.
+as makenew-python-package_.
 
 Add this line to your application's requirements.txt
 
 ::
 
-    makenew_python_package
+    makenew-python-package
 
 and install it with
 
@@ -147,9 +147,9 @@ Alternatively, install it directly using pip with
 
 ::
 
-    $ pip install makenew_python_package
+    $ pip install makenew-python-package
 
-.. _makenew_python_package: https://pypi.python.org/pypi/makenew_python_package
+.. _makenew-python-package: https://pypi.python.org/pypi/makenew-python-package
 .. _Python Package Index (PyPI): https://pypi.python.org/
 
 Development and Testing
@@ -158,14 +158,14 @@ Development and Testing
 Source Code
 ~~~~~~~~~~~
 
-The `makenew_python_package source`_ is hosted on GitHub.
+The `makenew-python-package source`_ is hosted on GitHub.
 Clone the project with
 
 ::
 
     $ git clone https://github.com/makenew/python-package.git
 
-.. _makenew_python_package source: https://github.com/makenew/python-package
+.. _makenew-python-package source: https://github.com/makenew/python-package
 
 Requirements
 ~~~~~~~~~~~~

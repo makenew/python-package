@@ -6,7 +6,7 @@ with open('README.rst', 'r') as f:
     long_description = f.read()
 
 setup(
-    name='makenew_python_package',
+    name='makenew-python-package',
     version=__version__,
     author='Evan Sosenko',
     author_email='razorx@evansosenko.com',
