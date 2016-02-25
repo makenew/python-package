@@ -41,7 +41,7 @@ makenew () {
   read -p '> GitHub user or organization name: ' mk_user
   read -p '> GitHub repository name: ' mk_repo
 
-  sed -i -e '4d;7,10d;27,125d;219,213d' README.rst
+  sed -i -e '4d;7,10d;27,128d;222,226d' README.rst
   sed -i -e "22i ${mk_description}" README.rst
 
   find_replace "s/0\.0\.0\.\.\./${mk_version}.../g"

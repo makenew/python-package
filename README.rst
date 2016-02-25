@@ -88,6 +88,9 @@ Bootstrapping a New Project
    one provided: update ``LICENSE.txt``, the README License section, and
    ``setup.py`` with your chosen license.
 
+5. Depending on how you name your tests, you may need to add them
+   to the ``find_packages`` exclude list in ``setup.py``.
+
 Updating
 ~~~~~~~~
 
