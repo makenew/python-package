@@ -27,8 +27,8 @@ Description
 Bootstrap a new Python_ package in less than a minute.
 
 This package skeleton intentionally makes no assumptions
-about documentation generation or testing frameworks
-as these choices depend too heavily on project specific goals.
+about documentation generation, as that choice depends too
+heavily on project specific goals.
 
 .. _Python: https://www.python.org/
 
@@ -37,6 +37,7 @@ Features
 
 - Package management with setuptools_ and hosting with PyPI_.
 - Dependency management with pip_.
+- Run tests with nose2_.
 - Lint with Pylint_.
 - Badges from Shields.io_.
 - `Travis CI`_ ready.
@@ -45,6 +46,7 @@ Features
 
 .. _EditorConfig: http://editorconfig.org/
 .. _Keep a CHANGELOG: http://keepachangelog.com/
+.. _nose2: https://nose2.readthedocs.org/
 .. _Pylint: https://www.pylint.org/
 .. _pip: https://pip.pypa.io/
 .. _PyPI: https://pypi.python.org/pypi
@@ -181,15 +183,21 @@ Install the development dependencies with
 .. _pip: https://pip.pypa.io/
 .. _Python 3: https://www.python.org/
 
-Testing
-~~~~~~~
+Tests
+~~~~~
 
-Lint with Pylint with
+Lint code with
 
 ::
 
     $ python setup.py lint
 
+
+Run tests with
+
+::
+
+    $ python setup.py test
 
 Contributing
 ------------
