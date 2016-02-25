@@ -39,10 +39,10 @@ Features
 - Dependency management with pip_.
 - Run tests with nose2_.
 - Lint with Pylint_.
-- Badges from Shields.io_.
 - `Travis CI`_ ready.
 - `Keep a CHANGELOG`_.
 - Consistent coding with EditorConfig_.
+- Badges from Shields.io_.
 
 .. _EditorConfig: http://editorconfig.org/
 .. _Keep a CHANGELOG: http://keepachangelog.com/
