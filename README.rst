@@ -1,13 +1,8 @@
 Python Package Skeleton
 =======================
 
-|Make-New|
 |PyPI| |GitHub-license| |Requires.io| |Travis|
 
-.. |Make-New| image:: https://makenew.github.io/makenew.svg
-   :target: https://makenew.github.io/
-   :height: 20
-   :alt: Make New
 .. |PyPI| image:: https://img.shields.io/pypi/v/makenew_python_package.svg
    :target: https://pypi.python.org/pypi/makenew_python_package
    :alt: PyPI
