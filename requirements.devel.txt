@@ -1,5 +1,7 @@
 -r requirements.txt
--r requirements.test.txt
 
-wheel
+nose2
+pylint
+setuptools-lint
 twine
+wheel
