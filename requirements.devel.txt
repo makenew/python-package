@@ -1,7 +1,7 @@
 -r requirements.txt
 
-nose2
-pylint
-setuptools-lint
-twine
-wheel
+pylint>=1.5.5,<2.0.0
+nose2>=0.6.4,<1.0.0
+setuptools-lint>=0.4.1,<1.0.0
+twine>=1.6.5,<2.0.0
+wheel>=0.29.0,<1.0.0
