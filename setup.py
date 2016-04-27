@@ -15,7 +15,6 @@ setup(
     license='MIT',
     description='Python package skeleton.',
     long_description=long_description,
-    test_suite='nose2.collector.collector',
     install_requires=[
     ]
 )
