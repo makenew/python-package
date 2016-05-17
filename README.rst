@@ -62,7 +62,7 @@ Bootstrapping a New Project
 
    ::
 
-       $ git reset --hard python-package-v1.1.1
+       $ git reset --hard python-package-v1.1.2
 
 2. Run
 
