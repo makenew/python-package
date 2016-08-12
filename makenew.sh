@@ -4,7 +4,18 @@ set -e
 set -u
 
 find_replace () {
-  git ls-files -z | xargs -0 sed -i "$1"
+  git grep --cached -Il '' | xargs sed -i.sedbak -e "$1"
+  find . -name "*.sedbak" -exec rm {} \;
+}
+
+sed_insert () {
+  sed -i.sedbak -e "$2\\"$'\n'"$3"$'\n' $1
+  rm $1.sedbak
+}
+
+sed_delete () {
+  sed -i.sedbak -e "$2" $1
+  rm $1.sedbak
 }
 
 check_env () {
@@ -42,8 +53,8 @@ makenew () {
   read -p '> GitHub user or organization name: ' mk_user
   read -p '> GitHub repository name: ' mk_repo
 
-  sed -i -e '22,121d;215,219d' README.rst
-  sed -i -e "22i ${mk_description}" README.rst
+  sed_delete README.rst '22,121d;215,219d'
+  sed_insert README.rst '22i' "${mk_description}"
 
   find_replace "s/version=.*/version='${mk_version}',/g"
   find_replace "s/0\.0\.0\.\.\./${mk_version}.../g"
@@ -59,7 +70,7 @@ makenew () {
   git mv makenew_python_package ${mk_module}
 
   mk_attribution='   Built from `makenew/python-package <https://github.com/makenew/python-package>`__.'
-  sed -i -e "6i \ ${mk_attribution}\n" README.rst
+  sed_insert README.rst '6i' "\ ${mk_attribution}\n"
 
   echo
   echo 'Replacing boilerplate.'
