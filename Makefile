@@ -8,7 +8,7 @@ build:
 	@python setup.py sdist bdist_wheel
 
 publish:
-	@twine upload dist/*
+	@pipenv run twine upload dist/*
 
 test:
 	@python setup.py test
