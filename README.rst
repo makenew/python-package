@@ -31,7 +31,7 @@ Features
 ~~~~~~~~
 
 - Package management with setuptools_ and hosting with PyPI_.
-- Dependency management with pip_.
+- Dependency management with Pipenv_.
 - Lint with Pylint_.
 - `Travis CI`_ ready.
 - `Keep a CHANGELOG`_.
@@ -41,7 +41,7 @@ Features
 .. _EditorConfig: http://editorconfig.org/
 .. _Keep a CHANGELOG: http://keepachangelog.com/
 .. _Pylint: https://www.pylint.org/
-.. _pip: https://pip.pypa.io/
+.. _Pipenv: https://pipenv.readthedocs.io/
 .. _PyPI: https://pypi.python.org/pypi
 .. _setuptools: https://pythonhosted.org/setuptools/.
 .. _Shields.io: http://shields.io/
@@ -126,26 +126,14 @@ Installation
 This package is registered on the `Python Package Index (PyPI)`_
 as makenew_python_package_.
 
-Add this line to your application's requirements.txt
+Install it with
 
 ::
 
-    makenew_python_package
-
-and install it with
-
-::
-
-    $ pip install -r requirements.txt
+    $ pipenv install makenew_python_package
 
 If you are writing a Python package which will depend on this,
 add this to your requirements in ``setup.py``.
-
-Alternatively, install it directly using pip with
-
-::
-
-    $ pip install makenew_python_package
 
 .. _makenew_python_package: https://pypi.python.org/pypi/makenew-python-package
 .. _Python Package Index (PyPI): https://pypi.python.org/
@@ -168,15 +156,15 @@ Clone the project with
 Requirements
 ~~~~~~~~~~~~
 
-You will need `Python 3`_ with pip_.
+You will need `Python 3`_ with Pipenv_.
 
 Install the development dependencies with
 
 ::
 
-    $ pip install -r requirements.devel.txt
+    $ pipenv install
 
-.. _pip: https://pip.pypa.io/
+.. _Pipenv: https://pipenv.readthedocs.io/
 .. _Python 3: https://www.python.org/
 
 Tests
