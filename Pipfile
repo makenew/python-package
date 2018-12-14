@@ -1,0 +1,17 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+docutils = "~=0.14"
+pygments = "~=2.3.0"
+pylint = "~=2.2.2"
+setuptools-lint = "~=0.6.0"
+twine = "~=1.12.1"
+wheel = "~=0.32.3"
+
+[packages]
+
+[requires]
+python_version = "3.7"
