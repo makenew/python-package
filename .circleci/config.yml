@@ -24,7 +24,7 @@ commands:
           steps:
             - run:
                 name: Install Alpine Linux build dependencies
-                command: apk add --no-cache ca-certificates git openssh-client
+                command: apk add --no-cache ca-certificates git make openssh-client
       - run:
           name: Install Pipenv
           command: pip install pipenv
