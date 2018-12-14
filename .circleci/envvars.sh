@@ -15,9 +15,9 @@ help () {
   echo 'Optionally, set NONINTERACTIVE=true to skip all prompts.'
   echo
   echo 'For example, assuming CIRCLE_TOKEN is set in your environment,' \
-       'update PYPI_TOKEN with'
+       'update TWINE_PASSWORD with'
   echo
-  echo '    $ NONINTERACTIVE=true CI_PYPI_PASSWORD=password .circleci/envvars.sh'
+  echo '    $ NONINTERACTIVE=true CI_TWINE_PASSWORD=password .circleci/envvars.sh'
 }
 
 help_circleci_repo () {
@@ -64,18 +64,18 @@ main () {
     read -p '> CircleCI API token (CIRCLE_TOKEN): ' circle_token
   fi
 
-  pypi_username=${CI_PYPI_USERNAME:-}
-  if [[ -z $pypi_username && $noninteractive != 'true' ]]; then
-    read -p '> PyPI username (PYPI_USERNAME): ' pypi_username
+  twine_username=${CI_TWINE_USERNAME:-}
+  if [[ -z $twine_username && $noninteractive != 'true' ]]; then
+    read -p '> PyPI username (TWINE_USERNAME): ' twine_username
   fi
 
-  pypi_password=${CI_PYPI_PASSWORD:-}
-  if [[ -z $pypi_password && $noninteractive != 'true' ]]; then
-    read -p '> PyPI password (PYPI_PASSWORD): ' pypi_password
+  twine_password=${CI_TWINE_PASSWORD:-}
+  if [[ -z $twine_password && $noninteractive != 'true' ]]; then
+    read -p '> PyPI password (TWINE_PASSWORD): ' twine_password
   fi
 
-  envvar 'PYPI_USERNAME' "${pypi_username}"
-  envvar 'PYPI_PASSWORD' "${pypi_password}"
+  envvar 'TWINE_USERNAME' "${twine_username}"
+  envvar 'TWINE_PASSWORD' "${twine_password}"
 }
 
 noninteractive=${NONINTERACTIVE:-false}

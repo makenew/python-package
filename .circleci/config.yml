@@ -52,12 +52,6 @@ commands:
       - restore_cache:
           key: pipenv-cache-{{ arch }}-{{ checksum ".versions" }}-
       - run:
-          name: Add PyPI authentication
-          command: |
-            echo '[pypi]' > $HOME/.pypirc
-            echo 'username = $PYPI_USERNAME' >> $HOME/.pypirc
-            echo 'password = $PYPI_PASSWORD' >> $HOME/.pypirc
-      - run:
           name: Install dependencies
           command: pipenv install --deploy --dev
       - when:
