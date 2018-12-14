@@ -31,6 +31,11 @@ check_env () {
 
 stage_env () {
   echo
+  echo 'Removing origin and tags.'
+  git tag | xargs git tag -d
+  git branch --unset-upstream
+  git remote rm origin
+  echo
   git rm -f makenew.sh
   echo
   echo 'Staging changes.'
