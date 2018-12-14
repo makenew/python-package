@@ -162,7 +162,7 @@ Install the development dependencies with
 
 ::
 
-    $ pipenv install
+    $ pipenv install --dev
 
 .. _Pipenv: https://pipenv.readthedocs.io/
 .. _Python 3: https://www.python.org/

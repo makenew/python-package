@@ -59,7 +59,7 @@ commands:
             echo 'password = $PYPI_PASSWORD' >> $HOME/.pypirc
       - run:
           name: Install dependencies
-          command: pipenv install --system --deploy
+          command: pipenv install --deploy --dev
       - when:
           condition: << parameters.save_cache >>
           steps:
