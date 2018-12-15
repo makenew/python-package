@@ -1,39 +1,34 @@
 Python Package Skeleton
 =======================
 
-|PyPI| |GitHub-license| |Requires.io| |Travis|
+|PyPI| |Requires.io| |CircleCI|
 
 .. |PyPI| image:: https://img.shields.io/pypi/v/makenew-python-package.svg
    :target: https://pypi.python.org/pypi/makenew-python-package
    :alt: PyPI
-.. |GitHub-license| image:: https://img.shields.io/github/license/makenew/python-package.svg
-   :target: ./LICENSE.txt
-   :alt: GitHub license
 .. |Requires.io| image:: https://img.shields.io/requires/github/makenew/python-package.svg
    :target: https://requires.io/github/makenew/python-package/requirements/
    :alt: Requires.io
-.. |Travis| image:: https://img.shields.io/travis/makenew/python-package.svg
-   :target: https://travis-ci.org/makenew/python-package
-   :alt: Travis
+.. |CircleCI| image:: https://img.shields.io/circleci/project/github/makenew/python-package.svg
+   :target: https://circleci.com/gh/makenew/python-package
+   :alt: CircleCI
+
+Package skeleton for an Python module.
 
 Description
 -----------
 
 Bootstrap a new Python_ package in less than a minute.
 
-This package skeleton intentionally makes no assumptions
-about documentation generation, as that choice depends too
-heavily on project specific goals.
-
 .. _Python: https://www.python.org/
 
 Features
 ~~~~~~~~
 
-- Package management with setuptools_ and hosting with PyPI_.
-- Dependency management with Pipenv_.
-- Lint with Pylint_.
-- `Travis CI`_ ready.
+- Package management with setuptools_ and publishing to PyPI_.
+- Secure dependency management with Pipenv_.
+- Linting with Pylint_.
+- `CircleCI`_ ready.
 - `Keep a CHANGELOG`_.
 - Consistent coding with EditorConfig_.
 - Badges from Shields.io_.
@@ -45,7 +40,7 @@ Features
 .. _PyPI: https://pypi.python.org/pypi
 .. _setuptools: https://pythonhosted.org/setuptools/.
 .. _Shields.io: http://shields.io/
-.. _Travis CI: https://travis-ci.org/
+.. _CircleCI: https://circleci.com/
 
 Bootstrapping a New Project
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
