@@ -178,6 +178,28 @@ Run tests with
 
     $ python setup.py test
 
+Publishing
+~~~~~~~~~~
+
+Update the CHANGELOG and the version number in ``setup.py``.
+Then create a new commit and tag, e.g.,
+the commit message should be like ``1.0.0`` and git tag ``v1.0.0``.
+Then push the new git tag which will trigger a CircleCI publish job.
+
+CircleCI
+--------
+
+*CircleCI should already be configured: this section is for reference only.*
+
+The following environment variables must be set on CircleCI_:
+
+- ``TWINE_USERNAME``: Username for publishing on PyPI.
+- ``TWINE_PASSWORD``: Password for publishing on PyPI.
+
+These may be set manually or by running the script ``./circleci/envvars.sh``.
+
+.. _CircleCI: https://circleci.com/
+
 Contributing
 ------------
 
