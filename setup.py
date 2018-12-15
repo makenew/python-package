@@ -11,7 +11,7 @@ setup(
     packages=find_packages(exclude=['docs']),
     url='https://github.com/makenew/python-package',
     license='MIT',
-    description='Python package skeleton.',
+    description='Package skeleton for a python module.',
     long_description=long_description,
     install_requires=[
     ]

@@ -195,11 +195,6 @@ To submit a patch:
 License
 -------
 
-This software can be used freely, see `The
-Unlicense <http://unlicense.org/UNLICENSE>`__. The copyright text
-appearing below and elsewhere in this repository is for demonstration
-purposes only and does not apply to this software.
-
 This Python package is licensed under the MIT license.
 
 Warranty

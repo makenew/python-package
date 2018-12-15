@@ -46,26 +46,28 @@ stage_env () {
 }
 
 makenew () {
-  read -p '> Package title: ' mk_title
-  read -p '> Package name (slug with dashes): ' mk_slug
-  read -p '> Module name (slug with underscores): ' mk_module
+  echo 'Answer all prompts.'
+  echo 'There are no defaults.'
+  echo 'Example values are shown in parentheses.'
+  read -p '> Package title (My Package): ' mk_title
+  read -p '> Package name (my-package): ' mk_slug
+  read -p '> Module name (my_package): ' mk_module
   read -p '> Package description: ' mk_description
-  read -p '> Version number: ' mk_version
-  read -p '> Author name: ' mk_author
-  read -p '> Author email: ' mk_email
-  read -p '> Copyright owner: ' mk_owner
-  read -p '> Copyright year: ' mk_year
-  read -p '> GitHub user or organization name: ' mk_user
-  read -p '> GitHub repository name: ' mk_repo
+  read -p '> Author name (Linus Torvalds): ' mk_author
+  read -p '> Author email (linus@example.com): ' mk_email
+  read -p '> GitHub user or organization name (my-user): ' mk_user
+  read -p '> GitHub repository name (my-repo): ' mk_repo
 
-  sed_delete README.rst '22,121d;215,219d'
-  sed_insert README.rst '22i' "${mk_description}"
+  circleci="https://circleci.com/gh/${mk_user}/${mk_repo}"
+  read -p "> Follow the CircleCI project at ${circleci} then press enter." mk_null
 
-  find_replace "s/version=.*/version='${mk_version}',/g"
-  find_replace "s/0\.0\.0\.\.\./${mk_version}.../g"
+  sed_delete README.rst '21,116d'
+  sed_insert README.rst '21i' 'TODO'
+
+  find_replace "s/version=.*/version='0.0.0',/g"
   find_replace "s/Python Package Skeleton/${mk_title}/g"
-  find_replace "s/Python package skeleton\./${mk_description}/g"
-  find_replace "s/2016 Evan Sosenko/${mk_year} ${mk_owner}/g"
+  find_replace "s/Package skeleton for a python module\./${mk_description}/g"
+  find_replace "s/2016 Evan Sosenko/2018 ${mk_author}/g"
   find_replace "s/Evan Sosenko/${mk_author}/g"
   find_replace "s/razorx@evansosenko\.com/${mk_email}/g"
   find_replace "s/makenew\/python-package/${mk_user}\/${mk_repo}/g"
@@ -73,9 +75,6 @@ makenew () {
   find_replace "s/makenew_python_package/${mk_module}/g"
 
   git mv makenew_python_package ${mk_module}
-
-  mk_attribution='   Built from `makenew/python-package <https://github.com/makenew/python-package>`__.'
-  sed_insert README.rst '6i' "\ ${mk_attribution}\n"
 
   echo
   echo 'Replacing boilerplate.'
