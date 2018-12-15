@@ -5,7 +5,7 @@ with open('README.rst', 'r') as f:
 
 setup(
     name='makenew-python-package',
-    version='2.0.0b3',
+    version='2.0.0',
     author='Evan Sosenko',
     author_email='razorx@evansosenko.com',
     packages=find_packages(exclude=['docs']),
